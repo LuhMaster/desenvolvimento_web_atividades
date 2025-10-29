@@ -1,0 +1,17 @@
+:root {
+   --color-primary: #0077cc;
+  --color-primary-dark: #005fa3;
+  --color-secondary: #d3f7b6;
+  --color-accent: #e63946;
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-text: #222222;
+  --color-muted: #666666;
+  --font-xs: 0.8rem;
+  --font-sm: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.6rem;
+  --font-xl: 2.4rem;
+  --max-width: 1200px;
+  --gap: 1.8rem;
+}

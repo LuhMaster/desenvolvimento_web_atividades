@@ -1,0 +1,165 @@
+header {
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: 1rem 2rem;
+}
+
+header>div {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  gap: var(--gap);
+}
+
+h1 {
+  font-size: var(--font-lg);
+  color: var(--color-surface);
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+nav a,
+.has-submenu>label {
+  display: inline-block;
+  color: var(--color-surface);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  white-space: nowrap;
+  border-radius: 4px;
+}
+
+nav a:hover,
+.has-submenu>label:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background: var(--color-primary-dark);
+  color: var(--color-surface);
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 100px;
+}
+
+nav li:hover>.submenu {
+  display: block;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--color-surface);
+}
+
+.submenu li a:hover {
+  background-color: var(--color-primary);
+}
+
+.menu-toggle,
+.submenu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: var(--color-surface);
+  cursor: pointer;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  header>div {
+    grid-template-columns: 1fr auto;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--color-primary-dark);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .menu-toggle:checked~nav ul {
+    display: flex;
+  }
+
+  nav li {
+    flex-direction: column;
+  }
+
+  nav a,
+  .has-submenu>label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .submenu {
+    display: none !important;
+    position: relative;
+    background: var(--color-primary);
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  nav li:hover>.submenu {
+    display: none !important;
+  }
+
+  .submenu-toggle:checked+label+.submenu {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .submenu li a {
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--color-surface);
+  }
+
+  .submenu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .has-submenu>label {
+    cursor: pointer;
+  }
+}
