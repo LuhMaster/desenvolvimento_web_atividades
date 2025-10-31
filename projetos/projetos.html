@@ -20,7 +20,7 @@
 
       <nav>
         <ul>
-          <li><a href="../index.html">Início</a></li>
+          <li><a href="../inicio/index.html">Início</a></li>
           <li class="has-submenu">
             <input type="checkbox" id="submenu-toggle" class="submenu-toggle">
             <label for="submenu-toggle">Sobre Nós ▾</label>
@@ -39,6 +39,7 @@
   </header>
   <br>
   <main>
+
     <section>
       <h2>Projetos Educacionais</h2>
       <article>
@@ -54,10 +55,9 @@
           segura e introdução à programação.</p>
       </article>
     </section>
-    <img src="../assets/educacionais.jpg" width="500" alt="Criança estudando ">
+
     <section>
       <h2>Projetos de Saúde e Bem-Estar</h2>
-
       <article>
         <h3>Cuidar é Amar</h3>
         <p>Realiza ações de saúde preventiva com atendimentos médicos e odontológicos gratuitos, vacinação e palestras
@@ -70,10 +70,9 @@
           acompanhamento profissional voluntário.</p>
       </article>
     </section>
-    <img src="../assets/saude.jpg" width="500" alt="Criança sendo examinada pelo medico">
+
     <section>
       <h2>Projetos de Desenvolvimento Pessoal e Cultural</h2>
-
       <article>
         <h3>Arte que Transforma</h3>
         <p>Promove oficinas de arte, música, teatro e dança como formas de expressão e inclusão social, incentivando a
@@ -86,7 +85,7 @@
           capoeira e atletismo.</p>
       </article>
     </section>
-    <img class="img_projeto" src="../assets/desenvolvimento.avif" alt="Criança plantando uma arvore">
+
     <section>
       <h2>Projetos de Formação e Inclusão Social</h2>
       <article>
@@ -94,9 +93,8 @@
         <p>Voltado a adolescentes em transição para o mercado de trabalho, oferece oficinas de empreendedorismo,
           educação financeira e cidadania.</p>
       </article>
-
     </section>
-    <img src="../assets/inclusao.jpg" width="500" alt="Crianças sentadas brincando">
+
     <section>
       <h2>Projetos Sustentáveis</h2>
       <article>
@@ -105,18 +103,30 @@
           do meio ambiente.</p>
       </article>
     </section>
-    <img src="../assets/ambiental.jpg" width="500" alt="Criança em uma plantação">
   </main>
 
-  <li><a href="#">Topo</a>
-    <br> <br> <br>
+  <div class="carrossel">
+    <div class="carrossel-images">
+      <img src="../assets/educacionais.jpg" alt="Criança estudando ">
+      <img src="../assets/saude.jpg" alt="Criança sendo examinada pelo medico">
+      <img src="../assets/desenvolvimento.avif" alt="Criança plantando uma arvore">
+      <img src="../assets/inclusao.jpg" alt="Crianças sentadas brincando">
+      <img src="../assets/ambiental.jpg" alt="Criança em uma plantação">
+    </div>
 
-    <footer>
-      <div>
-        <p>&copy; 2025 Crianças do Futuro. Todos os direitos reservados.</p>
-        <p>Desenvolvido apenas para fins educacionais.</p>
-      </div>
-    </footer>
+    <button class="prev" onclick="mover(-1)">&#10094;</button>
+    <button class="next" onclick="mover(1)">&#10095;</button>
+  </div>
+
+  <footer>
+    <div>
+      <p>&copy; 2025 Crianças do Futuro. Todos os direitos reservados.</p>
+      <p>Desenvolvido apenas para fins educacionais.</p>
+    </div>
+    <br>
+  </footer>
+  <script src="../js/bola.js"></script>
+  <script src="../js/carrossel.js"></script>
 </body>
 
 </html>
