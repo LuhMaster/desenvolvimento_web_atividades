@@ -25,6 +25,7 @@
   imgElement.style.objectPosition = ' 80% 50%';
   imgElement.style.display = 'block';
   imgElement.style.margin = 'auto';
+  imgElement.style.borderRadius = '20px'
   imgElement.style.transition = 'opacity 0.5s ease';
   slider.appendChild(imgElement);
 

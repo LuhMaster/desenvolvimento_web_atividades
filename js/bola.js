@@ -7,7 +7,7 @@
       height: 60px;
       background: url("../assets/bola.png") no-repeat center/contain;
       border-radius: 50%;
-      transition: all 4s linear;
+        transition: all 4s linear;
       z-index: 9999;
     }
   `;
